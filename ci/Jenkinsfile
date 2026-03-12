@@ -1,1 +1,2 @@
-@Library('finx-glue-shared-library-test') _ standardGitFlow(appName: 'finx-glue-multibranch-pipeline-test')
+@Library('finx-glue-shared-library-test') _
+standardGitFlow(appName: 'finx-glue-multibranch-pipeline-test')
