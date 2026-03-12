@@ -1,23 +1,2 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build & Test') {
-            steps {
-                echo "Running CI for branch: ${env.BRANCH_NAME}"
-                // Add your build commands here, e.g., sh './mvnw clean test'
-            }
-        }
-
-        stage('Deploy') {
-            when { 
-                // Git Flow logic: only deploy develop or main branches
-                branch pattern: "develop|main", comparator: "REGEXP" 
-            }
-            steps {
-                echo "Deploying ${env.BRANCH_NAME} to its environment..."
-                // Call your Shared Library here, e.g., deployApp(env.BRANCH_NAME)
-            }
-        }
-    }
-}
+@Library('finx-glue-shared-library-test') _
+standardGitFlow(appName: 'finx-glue-multibranch-pipeline-test')
