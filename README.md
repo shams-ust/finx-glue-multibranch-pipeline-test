@@ -1,5 +1,5 @@
-# finx-glue-multibranch-pipeline-test
-# [Service Name] Microservice
+
+# finx-glue-multibranch-pipeline-test Microservice
 New
 A brief, one-sentence description of what this service does (e.g., "Handles user authentication and profile management").
 
